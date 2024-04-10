@@ -21,7 +21,7 @@ const authenticateUser = (req: Request, res: Response, next: NextFunction): void
   if (!user) {
     res.status(401).json({ error: "Invalid username or password" });
     return;
-  }     
+  }
   (req as Request & { user?: User }).user = user;
   next();
 };
