@@ -19,6 +19,7 @@ app.get("/", async (req, res) => {
     console.error("Error occurred:", error);
   }
 });
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

@@ -14,7 +14,6 @@ app.get("/users", (req, res) => {
     </ul>`;
   return res.send(html);
 });
-
 app
   .route("/api/users/:id")
   .get((req, res) => {

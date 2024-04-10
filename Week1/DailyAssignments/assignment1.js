@@ -5,6 +5,7 @@ const getData = () => {
     return response.json();
   });
 };
+
 const fetchData = async () => {
   const result = await getData();
   console.log(result);
