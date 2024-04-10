@@ -27,7 +27,6 @@ app
   .delete((req, res) => {
     return res.json({ status: "Pending" });
   });
-
 app.post("/api/users", (req, res) => {
   const body = req.body;
   users.push({ ...body, id: users.length + 1 });
@@ -35,5 +34,4 @@ app.post("/api/users", (req, res) => {
     return res.json({ status: "success", id: users.length });
   });
 });
-
 app.listen(8000, () => console.log("Server Started!!"));
