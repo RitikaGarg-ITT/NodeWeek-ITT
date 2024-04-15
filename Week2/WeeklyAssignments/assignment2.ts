@@ -5,9 +5,9 @@ const app = express();
 app.use(express.json());
 
 const users: UserData[] = [
-  { id: 1, username: "user1", email: "user1@example.com" },
-  { id: 2, username: "user2", email: "user2@example.com" },
-  { id: 3, username: "user3", email: "user3@example.com" },
+  { id: 1, username: "user1", email: "user1@gmail.com" },
+  { id: 2, username: "user2", email: "user1@gmail.com" },
+  { id: 3, username: "user3", email: "user3@gmail.com" },
 ];
 
 app.get("/user/:id", (req: Request, res: Response) => {
