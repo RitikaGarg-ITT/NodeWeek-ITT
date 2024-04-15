@@ -1,13 +1,9 @@
 import express, { Request, Response, NextFunction } from "express";
 import { User } from "../Interfaces/interfaces";
+import { users } from "./utils";
 
 const app: express.Application = express();
 app.use(express.json());
-
-const users: User[] = [
-  { id: 1, username: "user1", password: "password1" },
-  { id: 2, username: "user2", password: "password2" },
-];
 
 const authenticateUser = (req: Request, res: Response, next: NextFunction): void => {
   try {
@@ -55,9 +51,4 @@ app.get("/account", (req: Request & { user?: User }, res: Response, next: NextFu
 app.use((err: Error, req: Request, res: Response) => {
   console.error(err);
   res.status(500).json({ error: "Internal server error" });
-});
-
-const PORT: number = 8000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
 });
