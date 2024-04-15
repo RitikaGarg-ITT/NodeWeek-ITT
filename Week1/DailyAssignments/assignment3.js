@@ -7,7 +7,6 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/api/users", (req, res) => {
   return res.json(users);
 });
-
 app.get("/users", (req, res) => {
   const html = `
     <ul>
@@ -15,7 +14,6 @@ app.get("/users", (req, res) => {
     </ul>`;
   return res.send(html);
 });
-
 app
   .route("/api/users/:id")
   .get((req, res) => {
@@ -29,7 +27,6 @@ app
   .delete((req, res) => {
     return res.json({ status: "Pending" });
   });
-
 app.post("/api/users", (req, res) => {
   const body = req.body;
   users.push({ ...body, id: users.length + 1 });
@@ -37,5 +34,4 @@ app.post("/api/users", (req, res) => {
     return res.json({ status: "success", id: users.length });
   });
 });
-
 app.listen(8000, () => console.log("Server Started!!"));

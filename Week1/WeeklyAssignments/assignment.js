@@ -8,7 +8,6 @@ app.get("/", async (req, res) => {
   try {
     const data = await fs.promises.readFile("users.json", { encoding: "utf8" });
     const jsonData = JSON.parse(data);
-
     const processedData = jsonData.users.map((user) => ({
       id: user.id,
       name: user.name.toUpperCase(),
