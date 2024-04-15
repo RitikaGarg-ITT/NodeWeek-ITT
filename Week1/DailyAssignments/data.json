@@ -822,13 +822,6 @@
     "gender": "female",
     "money_transfer": "dinnar",
     "id": 103
-  },
-  {
-    "first_name": "jaideep",
-    "last_name": "garg",
-    "email": "ritikagarg@1234gmail.com",
-    "gender": "female",
-    "money_transfer": "dinnar",
-    "id": 104
   }
+ 
 ]
