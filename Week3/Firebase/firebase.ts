@@ -16,7 +16,6 @@ const db = getFirestore();
 
 app.post("/create", async (req: Request, res: Response) => {
   try {
-    const id = req.body.email;
     const userJson = {
       email: req.body.email,
       firstName: req.body.firstName,
